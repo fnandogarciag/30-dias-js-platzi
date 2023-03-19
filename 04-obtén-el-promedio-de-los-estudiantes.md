@@ -1,3 +1,5 @@
+# Obtén el promedio de los estudiantes
+
 En este desafío, deberás calcular el promedio general de una clase, así como el promedio individual de cada estudiante.
 
 Para ello, se te proporcionará un array de objetos, cada uno de los cuales representará a un estudiante y tendrá las siguientes propiedades:
