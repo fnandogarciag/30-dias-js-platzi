@@ -11,9 +11,11 @@ Por ejemplo:
 Dados los siguientes llamados a la función <code>solution</code>:
 
 <pre>
+<code>
 solution(1)
 solution("Dieguillo")
 solution(true)
+</code>
 </pre>
 
 Debes obtener los siguientes resultados:
