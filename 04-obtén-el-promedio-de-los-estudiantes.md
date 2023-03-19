@@ -56,5 +56,26 @@ Output: {
 # Solución
 
 ```javascript
-
+export function getStudentAverage(students) {
+  const classGrades = [];
+  const averages = {
+    classAverage: null,
+    students: [],
+  };
+  students.forEach((student) => {
+    const studentGrades =
+      student.grades.reduce((sum, num) => {
+        classGrades.push(num);
+        return sum + num;
+      }, 0) / student.grades.length;
+    averages.students.push({
+      name: student.name,
+      average: parseFloat(studentGrades.toFixed(2)),
+    });
+  });
+  const classAverage =
+    classGrades.reduce((sum, num) => sum + num, 0) / classGrades.length;
+  averages.classAverage = parseFloat(classAverage.toFixed(2));
+  return averages;
+}
 ```
