@@ -6,8 +6,8 @@ Tu tarea es implementar la lógica de la función `sortByAvailabilityAndPrice`. 
 
 El ordenamiento se realizará siguiendo dos criterios:
 
-> Primero, los productos disponibles en inventario serán colocados al principio de la lista.
-> Luego, los productos serán ordenados por su precio, de manera ascendente.
+- Primero, los productos disponibles en inventario serán colocados al principio de la lista.
+- Luego, los productos serán ordenados por su precio, de manera ascendente.
 
 Es importante destacar que la lista original no sufrirá ninguna modificación, y que la función devolverá una nueva lista con los cambios mencionados.
 

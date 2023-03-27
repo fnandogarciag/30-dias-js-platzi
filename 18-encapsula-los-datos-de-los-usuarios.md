@@ -4,14 +4,16 @@ En este desafío, debes implementar la lógica de la clase "Usuario" que represe
 
 La clase debe tener las siguientes variables privadas:
 
-> `name` > `age` > `friends` (array de objetos Usuario)
-> `messages` (array de strings)
+- `name`
+- `age`
+- `friends` (array de objetos Usuario)
+- `messages` (array de strings)
 
 Además, debes proporcionar los siguientes métodos públicos:
 
-> `addFriend(friend)`: agrega un usuario a la lista de amigos del usuario actual.
-> `sendMessage(message, friend)`: agrega un mensaje a la lista de mensajes del usuario actual y al amigo especificado.
-> `showMessages()`: devuelve la lista de mensajes del usuario actual.
+- `addFriend(friend)`: agrega un usuario a la lista de amigos del usuario actual.
+- `sendMessage(message, friend)`: agrega un mensaje a la lista de mensajes del usuario actual y al amigo especificado.
+- `showMessages()`: devuelve la lista de mensajes del usuario actual.
 
 También debes tener definidos los getters y setters para acceder a los datos privados como el nombre y la edad, los cuales pueden ser modificados mediante su propio setter.
 

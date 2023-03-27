@@ -4,9 +4,9 @@ En este desafío tendrás que procesar una lista de compras.
 
 Deberás implementar la lógica de la función `processShoppingList` de tal manera que esta módifique el array original de la siguiente manera
 
-> Si el nombre del producto incluye la palabra "oferta", se debe aplicar un descuento del 20% al precio del producto.
-> Multiplicar el precio del producto por su cantidad
-> Eliminar el atributo `quantity` una vez hecho lo anterior.
+- Si el nombre del producto incluye la palabra "oferta", se debe aplicar un descuento del 20% al precio del producto.
+- Multiplicar el precio del producto por su cantidad
+- Eliminar el atributo `quantity` una vez hecho lo anterior.
 
 Finalmente, debes retornar el total de la suma de todos los productos de la lista modificada.
 

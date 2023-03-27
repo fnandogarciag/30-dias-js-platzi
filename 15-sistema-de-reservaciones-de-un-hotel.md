@@ -6,25 +6,25 @@ El objetivo de este ejercicio es utilizar closures para implementar la lógica d
 
 El closure debe retornar las siguientes funciones:
 
-> `searchReservation(id)`: esta función permitirá buscar una reservación por su ID. En caso de no encontrarla, se retornará un error con el mensaje "La reservación no fue encontrada".
+- `searchReservation(id)`: esta función permitirá buscar una reservación por su ID. En caso de no encontrarla, se retornará un error con el mensaje "La reservación no fue encontrada".
 
-> `getSortReservations()`: esta función nos devolverá una copia de las reservaciones sin modificar el array original ordenando las reservaciones por fecha de check-in de manera ascendente.
+- `getSortReservations()`: esta función nos devolverá una copia de las reservaciones sin modificar el array original ordenando las reservaciones por fecha de check-in de manera ascendente.
 
-> `addReservation(reservation)`: esta función se usará para agregar una nueva reservación. Debe asegurarse de que la habitación solicitada esté disponible para las fechas de check-in y check-out. En caso de que esté reservada, se retornará un error con el mensaje "La habitación no está disponible".
+- `addReservation(reservation)`: esta función se usará para agregar una nueva reservación. Debe asegurarse de que la habitación solicitada esté disponible para las fechas de check-in y check-out. En caso de que esté reservada, se retornará un error con el mensaje "La habitación no está disponible".
 
-> `removeReservation(id)`: esta función eliminará la reservación correspondiente al ID recibido y la retornará. En caso de que la reservación no exista, se retornará un error con el mensaje "La reservación que se busca remover no existe".
+- `removeReservation(id)`: esta función eliminará la reservación correspondiente al ID recibido y la retornará. En caso de que la reservación no exista, se retornará un error con el mensaje "La reservación que se busca remover no existe".
 
-> `getReservations()`: esta función nos devolverá todas las reservaciones.
+- `getReservations()`: esta función nos devolverá todas las reservaciones.
 
-> `getAvailableRooms(checkIn, checkOut)`: esta función recibirá dos parámetros, checkIn y checkOut con formato "dd/mm". La función debe devolver las habitaciones disponibles para las fechas dadas.
+- `getAvailableRooms(checkIn, checkOut)`: esta función recibirá dos parámetros, checkIn y checkOut con formato "dd/mm". La función debe devolver las habitaciones disponibles para las fechas dadas.
 
 El formato que recibirás para las reservaciones será el siguiente:
 
-> `id`: un identificador único
-> `name`: El nombre de quien agenda
-> `checkIn`: Fecha de llegada
-> `checkOut`: Fecha de salida
-> `roomNumber`: La habitación solicitada
+- `id`: un identificador único
+- `name`: El nombre de quien agenda
+- `checkIn`: Fecha de llegada
+- `checkOut`: Fecha de salida
+- `roomNumber`: La habitación solicitada
 
 Ejemplo 1:
 
