@@ -72,6 +72,72 @@ Output:
 
 # Solución
 
-```javascript
+### exercise.js
 
+```javascript
+export function processPay(method, quantity) {
+  return method.makePay(quantity);
+}
+```
+
+### Pay.class.js
+
+```javascript
+export class Pay {
+  makePay(quantity) {
+    return {
+      realized: true,
+      quantity: quantity,
+    };
+  }
+}
+```
+
+### Paypal.class.js
+
+```javascript
+import { Pay } from "./Pay.class.js";
+
+export class PayPal extends Pay {
+  constructor(email) {
+    super();
+    this.email = email;
+  }
+  makePay(quantity) {
+    return {
+      ...super.makePay(quantity),
+      platform: "PayPal",
+      email: this.email,
+    };
+  }
+}
+```
+
+### Card.class.js
+
+```javascript
+import { Pay } from "./Pay.class.js";
+
+export class Card extends Pay {
+  constructor(cardNumber) {
+    super();
+    this.cardNumber = cardNumber;
+  }
+  makePay(quantity) {
+    if (this.cardNumber.length !== 16)
+      throw Error("Número de la tarjeta incorrecta");
+    return {
+      ...super.makePay(quantity),
+      lastCardNumbers: this.cardNumber.substring(12),
+    };
+  }
+}
+```
+
+### Cash.class.js
+
+```javascript
+import { Pay } from "./Pay.class.js";
+
+export class Cash extends Pay {}
 ```
