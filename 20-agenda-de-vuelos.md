@@ -101,11 +101,11 @@ export class Reservation {
 
 ```javascript
 export class Passenger {
+  flights = [];
   constructor(name, lastName, age) {
     this.name = name;
     this.lastName = lastName;
     this.age = age;
-    this.flights = [];
   }
 }
 ```
@@ -116,13 +116,13 @@ export class Passenger {
 import { Reservation } from "./Reservation";
 
 export class Flight {
+  passengers = [];
   constructor(origin, destination, date, capacity, price) {
     this.origin = origin;
     this.destination = destination;
     this.date = date;
     this.capacity = capacity;
     this.price = price;
-    this.passengers = [];
   }
 
   sellTicket(passenger) {
@@ -153,10 +153,11 @@ import { Reservation } from "./Reservation";
 export class PremiumFlight extends Flight {
   constructor(origin, destination, date, capacity, price, specialService) {
     super(origin, destination, date, capacity, price);
-    this.price += specialService;
+    this.specialService = specialService;
   }
 
   sellTicket(passenger) {
+    this.price += this.specialService;
     return super.sellTicket(passenger);
   }
 }
@@ -170,24 +171,9 @@ import { Reservation } from "./Reservation";
 
 export class EconomicFlight extends Flight {
   sellTicket(passenger) {
-    if (this.capacity > 0) {
-      this.capacity -= 1;
-      this.passengers.push({
-        age: passenger.age,
-        fullName: `${passenger.name} ${passenger.lastName}`,
-      });
-      this.price =
-        passenger.age < 18 || passenger.age > 65
-          ? this.price * 0.8
-          : this.price;
-      passenger.flights.push({
-        origin: this.origin,
-        destination: this.destination,
-        date: this.date,
-        price: this.price,
-      });
-      return new Reservation(this, passenger);
-    }
+    this.price =
+      passenger.age < 18 || passenger.age > 65 ? this.price * 0.8 : this.price;
+    return super.sellTicket(passenger);
   }
 }
 ```

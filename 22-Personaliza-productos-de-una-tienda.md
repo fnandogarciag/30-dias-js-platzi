@@ -71,7 +71,7 @@ export class BasicProduct extends Product {
 }
 ```
 
-### exercise.js
+### WarrantyDecorator.js
 
 ```javascript
 import { Product } from "./product";
@@ -92,7 +92,7 @@ export class WarrantyDecorator extends Product {
 }
 ```
 
-### exercise.js
+### ShippingInsuranceDecorator.js
 
 ```javascript
 import { Product } from "./product";
