@@ -47,5 +47,25 @@ Output:
 # Solución
 
 ```javascript
+import { User } from "./user";
 
+export class Chat {
+  users = [];
+  constructor() {
+    if (!Chat.instance) {
+      Chat.instance = Object.freeze(this);
+    }
+    return Chat.instance;
+  }
+  sendMessage(message) {
+    this.users.forEach((user) => user.receiveMessage(message));
+  }
+  addUser(user) {
+    if (user instanceof User) this.users.push(user);
+  }
+  removeUser(name) {
+    const index = this.users.findIndex((user) => user.name === name);
+    if (index !== -1) this.users.splice(index, 1);
+  }
+}
 ```
